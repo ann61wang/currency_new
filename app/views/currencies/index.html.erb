@@ -1,0 +1,22 @@
+<table class="table">
+<tr>
+  <th>Currency_id</th>
+  <th>Data</th>
+  <th>Name</th>
+  <th>fBuyPri</th>
+  <th>mBuyPri</th>
+  <th>fSellPri</th>
+  <th>mSellPri</th>
+</tr>
+<% @currencies.each do |currency| %>
+  <tr>
+    <td><%= currency.currency_id %></td>
+    <td><%= currency.currency_data %></td>
+    <td><%= currency.currency_name %></td>
+    <td><%= currency.fBuyPri %></td>
+    <td><%= currency.mBuyPri %></td>
+    <td><%= currency.fSellPri %></td>
+    <td><%= currency.mSellPri %></td>
+  </tr>
+<% end %>
+</table>
