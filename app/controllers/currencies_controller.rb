@@ -36,6 +36,6 @@ class CurrenciesController < ApplicationController
   private
 
   def currency_params
-  	params.require(:currency).permit(:currency_id, :currency_name)
+  	params.require( :currency).permit(:currency_id )
   end
  end
