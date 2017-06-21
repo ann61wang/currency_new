@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+create_currency = for currency_id in "data1".."data21" do
+end
+
+puts "21 Currencies created."
