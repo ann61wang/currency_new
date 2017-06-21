@@ -4,14 +4,13 @@ namespace :dev do
     response = RestClient.get "http://web.juhe.cn:8080/finance/exchange/rmbquot", :params => { :key => "5739d74f2c58d4296ca190da25f220dc" }
     data = JSON.parse(response.body)
 
-  # data["result"][0]["data19"]
-  #
-  # Currency.create!( :fBuyPri=> data["result"][0]["data19"]["fBuyPri"],
-  #                   :mBuyPri=> data["result"][0]["data19"]["mBuyPri"],
-  #                   :currency_data=> data["result"][0]["data19"]["date"],
-  #                   :currency_name=> data["result"][0]["data19"]["name"],
-  #                   :fSellPri=> data["result"][0]["data19"]["fSellPri"],
-  #                   :mSellPri=> data["result"][0]["data19"]["mSellPri"]
+  # data["result"][0]["id"]
+  # Currency.create!( :fBuyPri=> data["result"][0]["id"]["fBuyPri"],
+  #                   :mBuyPri=> data["result"][0]["id"]["mBuyPri"],
+  #                   :currency_data=> data["result"][0]["id"]["date"],
+  #                   :currency_name=> data["result"][0]["id"]["name"],
+  #                   :fSellPri=> data["result"][0]["id"]["fSellPri"],
+  #                   :mSellPri=> data["result"][0]["id"]["mSellPri"]
   #                    )
 
   data["result"].each do |c|
